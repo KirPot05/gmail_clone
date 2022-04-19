@@ -10,7 +10,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 function SendMail() {
 
-	const { register, handleSubmit, watch, formState: {errors}} = useForm();
+	const { register, handleSubmit, formState: {errors}} = useForm();
 	const dispatch = useDispatch();
 
 
