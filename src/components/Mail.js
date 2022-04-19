@@ -2,10 +2,14 @@ import { ArrowBack, CheckCircle, Delete, Email, Error, ExitToApp, LabelImportant
 import { IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "../styles/Mail.css";
+import {useSelector} from 'react-redux'
+import { selectOpenMail } from "../features/mailSlice";
 
-function Mail({subject, }) {
+function Mail() {
 
 	const navigate = useNavigate();
+
+	const {title, subject, description, time} = useSelector(selectOpenMail)
 
 	return (
 		<div className="mail">
@@ -31,14 +35,14 @@ function Mail({subject, }) {
 
 			<div class="mail__body">
 				<div class="mail__bodyHeader">
-					<h2>Subject</h2>
+					<h2>{subject}</h2>
 					<LabelImportant className="mail__important"/>
-					<p>Title</p>
-					<p className="mail__time">10pm</p>
+					<p>{title}</p>
+					<p className="mail__time">{time}</p>
 				</div>
 
 				<div class="mail__message">
-					<p> This is a message </p>
+					<p> {description} </p>
 				</div>
 			</div>
 

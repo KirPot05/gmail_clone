@@ -16,6 +16,7 @@
     object-fit: contain;
     height: 40px;
     margin-left: 15px;
+    cursor: pointer;
 }
 
 .header__middle{
@@ -23,13 +24,15 @@
     align-items: center;
     flex: 0.7;
     background-color: whitesmoke;
-    padding: 6px;
+    padding: 6px 10px;
     margin: 8px;
     border-radius: 8px;
 }
 
 .header__middle > .MuiSvgIcon-root{
     color: grey;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .header__middle > input {
@@ -45,4 +48,5 @@
     display: flex;
     align-items: center; 
     padding-right: 20px;
+    gap: 10px;
 }
