@@ -9,26 +9,26 @@ function EmailList() {
         <div className="emailList">
             <div class="emailList__settings">
                 <div class="emailList__settingsLeft">
-                    <Checkbox/>
+                    <Checkbox />
 
-                    <IconButton> <ArrowDropDown/> </IconButton>
-                    <IconButton> <Redo/> </IconButton>
-                    <IconButton> <MoreVert/> </IconButton>
+                    <IconButton> <ArrowDropDown /> </IconButton>
+                    <IconButton> <Redo /> </IconButton>
+                    <IconButton> <MoreVert /> </IconButton>
 
                 </div>
 
                 <div class="emailList__settingsRight">
 
-                    <IconButton> <ChevronLeft/> </IconButton>
-                    <IconButton> <ChevronRight/> </IconButton>
-                    <IconButton> <KeyboardHide/> </IconButton>
-                    <IconButton> <Settings/> </IconButton>
+                    <IconButton> <ChevronLeft /> </IconButton>
+                    <IconButton> <ChevronRight /> </IconButton>
+                    <IconButton> <KeyboardHide /> </IconButton>
+                    <IconButton> <Settings /> </IconButton>
 
                 </div>
             </div>
 
             <div class="emailList__sections">
-                <Section Icon={Inbox} title="Primary" color="red" selected={true}/>
+                <Section Icon={Inbox} title="Primary" color="red" selected={true} />
                 <Section Icon={People} title="Social" color="blue" />
                 <Section Icon={LocalOffer} title="Promotions" color="green" />
             </div>
@@ -38,8 +38,15 @@ function EmailList() {
                 <EmailRow
                     title="Twitch"
                     subject="Hey Streamer"
-                    description = "This is a test"
-                    time = "10pm"
+                    description="This is a test"
+                    time="10pm"
+                />
+
+                <EmailRow
+                    title="Twitch"
+                    subject="Hey Streamer"
+                    description="This is a test"
+                    time="10pm"
                 />
             </div>
 

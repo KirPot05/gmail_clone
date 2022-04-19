@@ -1,34 +1,37 @@
 import { LabelImportantOutlined, StarBorderOutlined } from '@mui/icons-material';
 import { Checkbox, IconButton } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import '../styles/EmailRow.css';
 
-function EmailRow({id, title, subject, description, time}) {
-  return (
-    <div className='emailRow'>
-        <div class="emailRow__options">
-            <Checkbox/>
-            <IconButton>
-                <StarBorderOutlined/>
-            </IconButton>
+function EmailRow({ id, title, subject, description, time }) {
 
-            <IconButton>
-                <LabelImportantOutlined/>
-            </IconButton>
-        </div>
+	const navigate = useNavigate();
 
-        <div class="emailRow__title">
+	return (
+		<div className='emailRow' onClick={() => navigate('/mail')}>
+			<div class="emailRow__options">
+				<Checkbox />
+				<IconButton>
+					<StarBorderOutlined />
+				</IconButton>
 
-        </div>
+				<IconButton>
+					<LabelImportantOutlined />
+				</IconButton>
+			</div>
 
-        <div class="emailRow__message">
+			<h3 class="emailRow__title">
+				{title}
+			</h3>
 
-        </div>
+			<div class="emailRow__message">
+				<h4>{subject} <span class="emailRow__description"> {"  -  " + description}</span> </h4>
+				
+			</div>
 
-        <div class="emailRow__description">
-
-        </div>
-    </div>
-  )
+			<p class="emailRow__time"> {time} </p>
+		</div>
+	)
 }
 
 export default EmailRow;
